@@ -8,7 +8,7 @@ final yearController = new TextEditingController();
 final airportController = new TextEditingController();
 
 class FlightAdd extends StatelessWidget{
-  Color barColor = Colors.redAccent;
+  Color barColor = Colors.blueAccent;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -134,11 +134,20 @@ class FlightAdd extends StatelessWidget{
                     ),
                   ],
                 ),
+              Container(
+                margin: EdgeInsets.all(12),
+                color: barColor,
+                height: 50,
+                width: 50,
+                child: Icon(
+                  Icons.check, color: Colors.white,
+                ),
+              ),
               ],
+    ),
             )
-        )
     );
-  }
-  String dateRet = monthController.toString()+dayController.toString()+yearController.toString();
-  String iataCode = airportController.toString();
+}
+String dateRet = monthController.toString()+dayController.toString()+yearController.toString();
+String iataCode = airportController.toString();
 }
